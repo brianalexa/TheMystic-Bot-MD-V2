@@ -250,7 +250,7 @@ export async function handler(chatUpdate) {
             if (chat) {                if (!('isBanned' in chat))
                     chat.isBanned = false
                 if (!('welcome' in chat))
-                    chat.welcome = true
+                    chat.welcome = false
                 if (!('detect' in chat))
                     chat.detect = true
                 if (!('sWelcome' in chat))
@@ -262,7 +262,7 @@ export async function handler(chatUpdate) {
                 if (!('sDemote' in chat))
                     chat.sDemote = ''
                 if (!('delete' in chat))
-                    chat.delete = true
+                    chat.delete = false
                 if (!('modohorny' in chat))
                     chat.modohorny = false    
                 if (!('autosticker' in chat))
@@ -270,30 +270,30 @@ export async function handler(chatUpdate) {
                 if (!('audios' in chat))
                     chat.audios = false                            
                 if (!('antiLink' in chat))
-                    chat.antiLink = false
+                    chat.antiLink = true
                 if (!('antiLink2' in chat))
                     chat.antiLink2 = false
                 if (!('viewonce' in chat))
-                    chat.viewonce = false
+                    chat.viewonce = true
                 if (!('antiToxic' in chat))
                     chat.antiToxic = false
                 if (!isNumber(chat.expired))
                     chat.expired = 0
             } else
                 db.data.chats[m.chat] = {                    isBanned: false,
-                    welcome: true,
+                    welcome: false,
                     detect: true,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
-                    delete: true,
-                    modohorny: true,
+                    delete: false,
+                    modohorny: false,
                     autosticker: false,
                     audios: true,
-                    antiLink: false,
+                    antiLink: true,
                     antiLink2: false,
-                    viewonce: false,
+                    viewonce: true,
                     antiToxic: false,
                     expired: 0,
                 }
