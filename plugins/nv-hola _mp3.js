@@ -10,7 +10,7 @@ type: 'audioMessage',
 ptt: true 
 })
 }
-handler.command = /^(rey|rey del dolor)$/i
+handler.command = /^(rey)$/i
 handler.fail = null
 handler.exp = 100
 export default handler
